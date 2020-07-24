@@ -23,17 +23,17 @@ export class BancoHoraConfigService {
     }
 
     async setKey(configs: BancoHoraConfig): Promise<BancoHoraConfig>{
-        let existantConfig = await this.bancoHorasRepository.findOne({chave: configs.chave});
-        if(!existantConfig) {
+        let configExistente = await this.bancoHorasRepository.findOne({chave: configs.chave});
+        if(!configExistente) {
             return this.bancoHorasRepository.save(configs);
         } else {
 
-            existantConfig.chave = configs.chave;
-            existantConfig.valor_texto = configs.valor_texto;
-            existantConfig.valor_inteiro = configs.valor_inteiro;
-            existantConfig.valor_booleano = configs.valor_booleano;
-            existantConfig.valor_data = configs.valor_data;
-            return this.bancoHorasRepository.save(existantConfig);
+            configExistente.chave = configs.chave;
+            configExistente.valor_texto = configs.valor_texto;
+            configExistente.valor_inteiro = configs.valor_inteiro;
+            configExistente.valor_booleano = configs.valor_booleano;
+            configExistente.valor_data = configs.valor_data;
+            return this.bancoHorasRepository.save(configExistente);
         }
     }
 
