@@ -12,9 +12,9 @@ const config = {
     password: data.TYPEORM_PASSWORD,
     database: data.TYPEORM_DATABASE,
     entities: ['dist/**/*.entity{.ts,.js}'],
-    migrations: ['dist/db/migrations/*.{.ts,.js}'],
+    migrations: ['dist/**/migrations/*{.ts,.js}'],
     cli: {
-        migrationsDir: "src/db/migrations"
+        migrationsDir: "dist/db/migrations"
     },
     synchronize: data.TYPEORM_SYNCHRONIZE === 'true',
 };
