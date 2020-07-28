@@ -7,13 +7,13 @@ import { BancoHoraConfigModule } from './banco-hora-config/banco-hora-config.mod
 import { BancosHorasModule } from './bancos-horas/bancos-horas.module';
 
 @Module({
-  imports: [
-    TypeOrmModule.forRoot(),
-    PontosModule,
-    BancoHoraConfigModule,
-    BancosHorasModule,
-  ],
-  controllers: [AppController],
-  providers: [AppService],
+    imports: [
+        TypeOrmModule.forRoot(),
+        PontosModule,
+        BancoHoraConfigModule,
+        BancosHorasModule,
+    ],
+    controllers: [AppController],
+    providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

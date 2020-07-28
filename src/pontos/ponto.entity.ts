@@ -8,7 +8,7 @@ export class Ponto {
     @Column()
     ponto: number;
 
-    @Column("char", {length:1})
+    @Column({length:1})
     tipo: string;
 
     @Column("int")
