@@ -4,13 +4,14 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PontosModule } from './pontos/pontos.module';
 import { BancoHoraConfigModule } from './banco-hora-config/banco-hora-config.module';
-import { PontosController } from './pontos/pontos.controller';
+import { BancosHorasModule } from './bancos-horas/bancos-horas.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(),
     PontosModule,
     BancoHoraConfigModule,
+    BancosHorasModule,
   ],
   controllers: [AppController],
   providers: [AppService],
