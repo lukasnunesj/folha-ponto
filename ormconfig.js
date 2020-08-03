@@ -14,7 +14,7 @@ const config = {
     entities: ['dist/**/*.entity{.ts,.js}'],
     migrations: ['dist/**/migrations/*{.ts,.js}'],
     cli: {
-        migrationsDir: "dist/db/migrations"
+        migrationsDir: "src/db/migrations"
     },
     synchronize: data.TYPEORM_SYNCHRONIZE === 'true',
 };
