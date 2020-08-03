@@ -44,11 +44,11 @@ describe('Configurações do Banco de Horas', () => {
             module.close();
         });
 
-        it("should be defined", () => {
+        it("deve ter definido o servico", () => {
             expect(service).toBeDefined();
         });
         
-        it('should have the repo mocked', () => {
+        it('deve ter definido o repositorio', () => {
             expect(typeof repo.find).toBe('function');
         });
 
@@ -58,12 +58,11 @@ describe('Configurações do Banco de Horas', () => {
                 'chave': 'teste_1',
                 'valor_inteiro': 1
             });
-            console.log(config)
 
             await service.setKey(config);
-            const key = service.getKey('teste_1');
-            expect(key).toBe(config.valor_inteiro);
+            const key = await service.getKey('teste_1');
+            expect(key.valor_inteiro).toBe(config.valor_inteiro);
 
         });
     });
-})
+});

@@ -14,8 +14,8 @@ export class BancoHoraConfigService {
         return this.bancoHorasRepository.find();
     }
 
-    getKey(chave: string): Promise<BancoHoraConfig[]>{
-        return this.bancoHorasRepository.find({
+    getKey(chave: string): Promise<BancoHoraConfig>{
+        return this.bancoHorasRepository.findOne({
             where: {
                 chave: chave
             }
