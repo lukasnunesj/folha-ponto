@@ -13,6 +13,6 @@ script:
 # Script de teste encontrado no package.json
   - yarn test
 # Script dos testes end-to-end
-  - yarn run test:e2e
+#  - yarn run test:e2e
 
 # Caso necessário você pode settar configurações para serem excutadas depois do script "principal" com a configuração # after_script #
